@@ -15,3 +15,4 @@ def a_plus_abs_b(a, b):
 
 def two_of_three(a, b, c):
     summa = max(a, b, c)**2 + max(min(a, b), min(a, c), min(b, c))**2
+    return summa
