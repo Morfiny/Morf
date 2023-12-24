@@ -60,18 +60,18 @@ def count_pairs(last_digit, n):
 
  #Вопрос 5
 
- def count_change(amount):
-     return count_partitions(amount, 1)
+def count_change(amount):
+    return count_partitions(amount, 1)
 
- def count_partitions(amount, smallest_coin):
-     if amount == 0:
-         return 1
-     elif amount < 0:
-         return 0
-     else:
-         count = 0
-         coin = smallest_coin
-         while coin <= amount:
-             count += count_partitions(amount - coin, coin)
-             coin *= 2
-         return count
+def count_partitions(amount, smallest_coin):
+ if amount == 0:
+     return 1
+ elif amount < 0:
+     return 0
+ else:
+     count = 0
+     coin = smallest_coin
+     while coin <= amount:
+         count += count_partitions(amount - coin, coin)
+         coin *= 2
+     return count
